@@ -1,0 +1,58 @@
+﻿@model Registro
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+
+
+
+<div>
+    <form asp-action="Create" asp-controller="Registro" method="post" class="form-group">
+        <div class="form-row">
+
+            <div class="col-md-2">
+                <label class="font-weight-bold">Nombre</label>
+                <input type="text" asp-for="Nombre" value="" />
+            </div>
+
+
+            <div class="col-md-2">
+                <label class="font-weight-bold">Apellido</label>
+                <input type="text" asp-for="Apellido" value="" />
+            </div>
+        </div>
+
+        <br>
+        <div>
+            <input type="number" value="" asp-for="Edad" placeholder="Edad" />
+        </div>
+
+        <br>
+
+        <div>
+            <label class="font-weight-bold">Direccion</label>
+        </div>
+
+        <div>
+            <input type="text" asp-for="Direccion" value="" class="col-10" />
+        </div>
+
+        <br>
+
+        <div>
+            <label class="font-weight-bold">Contacto</label>
+        </div>
+
+        <div>
+            <input type="number" asp-for="Contacto" value="" />
+        </div>
+
+        <br>
+
+        <div>
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+</div>

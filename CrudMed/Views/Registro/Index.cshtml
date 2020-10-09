@@ -1,0 +1,49 @@
+﻿@model List<Registro>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Pacientes</h1>
+
+@*@foreach (var item in Model)
+{
+<h2>@item.Nombre</h2>
+<h2>@item.Apellido</h2>
+<h2>@item.Direccion</h2>
+<h2>@item.Edad</h2>
+
+}*@
+
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr class="col-md-12">
+            <td>Nombre</td>
+            <td>Apellido</td>
+            <td>Edad</td>
+            <td>Direccion</td>
+            <td>Contacto</td>
+            <td></td>
+            <td></td>
+        </tr>
+     </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Nombre</td>
+            <td>@item.Apellido</td>
+            <td>@item.Edad</td>
+            <td>@item.Direccion</td>
+            <td>@item.Contacto</td>
+            <td>@Html.ActionLink("Editar", "Edit", new { id = item.Id  } )</td>
+            <td>@Html.ActionLink("Eliminar", "Delete", new {id = item.Id })</td>
+        </tr>
+        }
+           
+    </tbody>
+</table>
+
+@Html.ActionLink("Crear Paciente", "Create")

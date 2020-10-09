@@ -1,0 +1,57 @@
+﻿@model Registro
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Eliminar Paciente</h1>
+
+<div>
+    <form asp-action="Delete" class="form-group">
+        <div class="form-row">
+            <input type="hidden" asp-for="Id" />
+            <div class="col-md-2">
+                <label class="font-weight-bold">Nombre</label>
+                <input type="text" asp-for="Nombre" />
+            </div>
+
+
+            <div class="col-md-2">
+                <label class="font-weight-bold">Apellido</label>
+                <input type="text" asp-for="Apellido" />
+            </div>
+        </div>
+
+        <br>
+        <div>
+            <input type="number" asp-for="Edad" placeholder="Edad" />
+        </div>
+
+        <br>
+
+        <div>
+            <label class="font-weight-bold">Direccion</label>
+        </div>
+
+        <div>
+            <input type="text" asp-for="Direccion" class="col-10" />
+        </div>
+
+        <br>
+
+        <div>
+            <label class="font-weight-bold">Contacto</label>
+        </div>
+
+        <div>
+            <input type="number" asp-for="Contacto" />
+        </div>
+
+
+        <br>
+        <div>
+            <input type="submit" value="Delete" class="btn btn-primary" />
+            <button asp-action="Index" class="btn btn-danger">Cancel</button>
+        </div>
+    </form>
+</div>
